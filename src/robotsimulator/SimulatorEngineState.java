@@ -57,6 +57,10 @@ public class SimulatorEngineState {
     public void setGiveCommands(Commands giveCommands) {
         this.giveCommands = giveCommands;
     }
+    
+        public void evaluatePosition(Robot robotLocation) {
+        System.out.println("Robot is now located at the co ordinates of " + "");
+    }
 
     private void allowCommands() {
         Scanner myCommands = new Scanner(System.in);
@@ -105,13 +109,13 @@ public class SimulatorEngineState {
         switch(giveCommands.getCommandList().get(i).toString()) {
             case "stop": giveCommands.stopRobot();
                 break;
-            case "forward": giveCommands.moveForward(25);
+            case "forward": giveCommands.forward(25);
                 break;
-            case "backward": giveCommands.moveBackwards(23);
+            case "backward": giveCommands.backwards(23);
                 break;
-            case "left": giveCommands.turnLeft(34);
+            case "left": giveCommands.left(34);
                 break;
-            case "right": giveCommands.turnRight(46);
+            case "right": giveCommands.right(46);
                 break;
             case "wait": giveCommands.wait(23);
                 break;

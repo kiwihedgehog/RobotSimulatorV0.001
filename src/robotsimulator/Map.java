@@ -7,13 +7,10 @@ package robotsimulator;
 class Map {
     private int xCoordinates;
     private int yCoordinates;
-    private int[][] mapLocationLog = new int[2000][2000];
+    final String north = "North";
+    final String south = "South";
+    final String east =  "East";
+    final String west = "West";
     
-        public int[][] getMapLocationLog() {
-        return mapLocationLog;
-    }
 
-    public void setMapLocationLog(int[][] mapLocationLog) {
-        this.mapLocationLog = mapLocationLog;
-    }
 }

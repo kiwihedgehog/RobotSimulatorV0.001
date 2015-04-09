@@ -7,8 +7,9 @@ import java.util.ArrayList;
  * @author masona11
  */
 class Movement {
-    
-    int facingDirection;
+    private Map surfaceArea = new Map();
+    int degreeDirection;
+    String cardinalDirection;
     private Robot myRobot;
     private ArrayList positionLog = new ArrayList();
     public ArrayList calculatePosition(ArrayList timeQeue){ //should have more intake parametres
@@ -17,7 +18,7 @@ class Movement {
     }
     
     public int calculateRotation(int motorPowerRight, int motorPowerLeft) {
-        int degreesToTurn = 0;
+        int degreesToTurn;
         int forceDifference = 0;
         boolean right = true;
         
@@ -36,9 +37,9 @@ class Movement {
         return degreesToTurn;
     }
     
-    public String calculateDirectionalFace() {
+    public String calculateDirectionalFace(int degreeDirection) {
         // Switch statement to get face position.
-        String cardinalDirection = "North";
+        
         int i = 0;
         switch(i) {
             case 1: cardinalDirection = "North";
@@ -60,9 +61,15 @@ class Movement {
                 
                 
         }
+        
     return cardinalDirection;
     }
 
+    public boolean isBetween(int x, int lower, int upper){
+       boolean condition = true;
+        
+        return condition;
+    }
     public ArrayList getPositionLog() {
         return positionLog;
     }
@@ -74,6 +81,21 @@ class Movement {
     public void setDirection() {
         
     }
+
+    public void turnRight(int degreesToTurn) {
+    }
+
+    public void moveBackwards(int centimetres) {
+    }
+
+    public void turnLeft(int degreesToTurn) {
+        cardinalDirection
+    }
+
+    public void moveForward(int centimetres) {
+    }
+    
+
     
     
     

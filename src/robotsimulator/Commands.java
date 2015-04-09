@@ -31,25 +31,22 @@ class Commands {
         
     }
     
-    public void moveForward (int centimetres) {
-        
-    }
-    
-    public void moveBackwards (int centimetres) {
-        
-    }
-    
-    public void turnLeft (int degreesToTurn) {
-        
-    }
-    
-    public void turnRight(int degreesToTurn) {
-        
-    }
     public int getDegrees(){
         int blah = 0;
         return blah;
     }
+    public void left (int degrees) {
+        
+    }
+    public void right(int centimetres){
+            
+        }
+    public void forward(int centimetres){
+            
+        }
+    public void backwards(int degrees){
+            
+        }
     public void wait(int seconds){
         
     }
@@ -115,7 +112,7 @@ class Commands {
         return instructionList;
     }
 
-
+   
     
     
     
