@@ -36,7 +36,8 @@ class Commands {
         return blah;
     }
     public void left (int degrees) {
-        
+     int finalFace = moveToLocation.turnLeft(degrees);
+     
     }
     public void right(int centimetres){
             

@@ -37,7 +37,7 @@ public class SimulatorEngineState {
                 break;
             case 2: allowCommands();
                 break;
-            case 3: simulateCommands();
+            case 3: readCommandList();
                 break;
         }
     }
@@ -100,9 +100,6 @@ public class SimulatorEngineState {
 	}
     }
 
-    private void simulateCommands() {
-       
-    }
     private void readCommandList(){
     for(int i = 0; i > giveCommands.getCommandList().size(); i++){
         

@@ -12,7 +12,7 @@ class Robot {
    private final int maxMovementSpeed = 100;
    private int TotaldistanceTravelled;
    private double turnSpeed;
-   private int[][] mapLocationLog = new int[2000][2000];
+   private int[][] mapLocationLog = new int[2000][2000]; //User cannot specify more than 2k commands.
 
     public Motor getLeftMotor() {
         return leftMotor;
