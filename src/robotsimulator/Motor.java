@@ -1,7 +1,8 @@
 package robotsimulator;
 
 /**
- *
+ * The Motor class is where the motor power and names will be set. Any additional modifications in terms of robot movement 
+ * will happen in this class.
  * @author masona11
  */
 class Motor {

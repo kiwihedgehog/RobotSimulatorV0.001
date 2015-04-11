@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 /**
  *
+ * This class knows how to execute commands and deal with user related issues in terms of commands.
  * @author masona11
  */
 class Commands {

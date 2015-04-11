@@ -9,6 +9,8 @@ public class RobotSimulator {
   
     
     /**
+     * 
+     * This is the main class of the program where the entire program will be executed from.
      * @param args the command line arguments
      */
     public static void main(String[] args) {

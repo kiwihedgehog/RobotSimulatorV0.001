@@ -2,6 +2,8 @@ package robotsimulator;
 import java.util.Scanner;
 /**
  *
+ * The simulator engine class will be a class in which all methods will be activated and used together to combine and work the program as a whole.
+ * If you want to spend any time cleaning up redundant or sloppy code, this will be the place to do so.
  * @author masona11
  */
 public class SimulatorEngineState {

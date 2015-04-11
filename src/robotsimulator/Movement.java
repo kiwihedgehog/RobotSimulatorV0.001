@@ -3,15 +3,13 @@ package robotsimulator;
 import java.util.ArrayList;
 
 /**
- *
+ * The movement class will contain any calculations which are required to calculate a new position for the robot. This class largely relies on the map class and robot class.
  * @author masona11
  */
 class Movement {
     private Map surfaceArea = new Map();
     int degreeDirection;
-    String cardinalDirection;
     private Robot myRobot;
-    private ArrayList positionLog = new ArrayList();
     public ArrayList calculatePosition(ArrayList timeQeue){ //should have more intake parametres
                
         return timeQeue;
@@ -42,27 +40,27 @@ class Movement {
         
         int i = 0;
         switch(i) {
-            case 1: cardinalDirection = "North";
+            case 1: surfaceArea.cardinalDirection = "North";
                 break;
-            case 2: cardinalDirection = "North East";
+            case 2: surfaceArea.cardinalDirection = "North East";
                 break;
-            case 3: cardinalDirection = "East";
+            case 3: surfaceArea.cardinalDirection = "East";
                 break;
-            case 4: cardinalDirection = "South East";
+            case 4: surfaceArea.cardinalDirection = "South East";
                 break;
-            case 5: cardinalDirection = "South";
+            case 5: surfaceArea.cardinalDirection = "South";
                 break;
-            case 6: cardinalDirection = "South West";
+            case 6: surfaceArea.cardinalDirection = "South West";
                 break;
-            case 7: cardinalDirection = "West";
+            case 7: surfaceArea.cardinalDirection = "West";
                 break;
-            case 8: cardinalDirection = "North West";    
+            case 8: surfaceArea.cardinalDirection = "North West";    
                 break;
                 
                 
         }
         
-    return cardinalDirection;
+    return surfaceArea.cardinalDirection;
     }
 
     public boolean isBetween(int x, int lower, int upper){
@@ -70,13 +68,7 @@ class Movement {
         
         return condition;
     }
-    public ArrayList getPositionLog() {
-        return positionLog;
-    }
 
-    public void setPositionLog(ArrayList positionLog) {
-        this.positionLog = positionLog;
-    }
 
     public void setDirection() {
         
