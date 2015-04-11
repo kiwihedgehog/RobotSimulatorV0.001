@@ -82,14 +82,23 @@ class Movement {
         
     }
 
-    public void turnRight(int degreesToTurn) {
+    public int turnRight(int degreesToTurn) {
+        if((degreeDirection + degreesToTurn) > 360){
+            degreeDirection += degreesToTurn - 360;
+        }
+        else{ degreeDirection += degreesToTurn; }
+        return degreeDirection;
     }
 
     public void moveBackwards(int centimetres) {
     }
 
-    public void turnLeft(int degreesToTurn) {
-        cardinalDirection
+    public int turnLeft(int degreesToTurn) {
+         if(degreesToTurn <= degreeDirection){
+        degreeDirection -= degreesToTurn;
+        }
+         else{degreeDirection = degreesToTurn - 360;}
+        return degreeDirection;
     }
 
     public void moveForward(int centimetres) {
