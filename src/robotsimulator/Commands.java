@@ -27,21 +27,18 @@ class Commands {
         instructionList.add("go - Starts the simulation after commands are entered.");
         instructionList.add("exit - Exits the Robot Simulator.");
     }
-    
+    //Methods implemented here in the commands class for later expansion of command utility and structure.
     public void stopRobot(){
         
     }
     
-    public int getDegrees(){
-        int blah = 0;
-        return blah;
-    }
     public void left (int degrees) {
      int finalFace = moveToLocation.turnLeft(degrees);
      
     }
+    
     public void right(int centimetres){
-            
+            moveToLocation.turnRight(centimetres);
         }
     public void forward(int centimetres){
             

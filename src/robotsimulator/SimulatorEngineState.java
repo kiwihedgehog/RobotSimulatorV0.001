@@ -11,7 +11,7 @@ public class SimulatorEngineState {
     
     private int engineStateNumber;
     private int engineState;
-    private Commands giveCommands = new Commands();
+    Commands userCommands = new Commands();
     
     public String displayInstructions(){
         String instructions = "Please enter a command or type 'commands' for the command list:";
@@ -52,12 +52,12 @@ public class SimulatorEngineState {
         this.engineStateNumber = engineStateNumber;
     }
 
-    public Commands getGiveCommands() {
-        return giveCommands;
+    public Commands getUserCommands() {
+        return userCommands;
     }
 
-    public void setGiveCommands(Commands giveCommands) {
-        this.giveCommands = giveCommands;
+    public void setUserCommands(Commands userCommands) {
+        this.userCommands = userCommands;
     }
     
         public void evaluatePosition(Robot robotLocation) {
@@ -66,7 +66,7 @@ public class SimulatorEngineState {
 
     private void allowCommands() {
         Scanner myCommands = new Scanner(System.in);
-        Commands userCommands = new Commands();
+        
         String commands = "start";
         
         while(!commands.equals("exit")){
@@ -84,10 +84,9 @@ public class SimulatorEngineState {
                     
                     System.out.println("How long would you like to wait?");
                     int waitTime = inputWaitTime.nextInt(); 
-                default:
-                    userCommands.addCommandToList(commands);
-                    break;
+                    break;                   
             }
+            userCommands.addCommandToList(commands);
         }
         
         
@@ -103,20 +102,20 @@ public class SimulatorEngineState {
     }
 
     private void readCommandList(){
-    for(int i = 0; i > giveCommands.getCommandList().size(); i++){
+    for(int i = 0; i > userCommands.getCommandList().size(); i++){
         
-        switch(giveCommands.getCommandList().get(i).toString()) {
-            case "stop": giveCommands.stopRobot();
+        switch(userCommands.getCommandList().get(i).toString()) {
+            case "stop": userCommands.stopRobot();
                 break;
-            case "forward": giveCommands.forward(25);
+            case "forward": userCommands.forward(25);
                 break;
-            case "backward": giveCommands.backwards(23);
+            case "backward": userCommands.backwards(23);
                 break;
-            case "left": giveCommands.left(34);
+            case "left": userCommands.left(34);
                 break;
-            case "right": giveCommands.right(46);
+            case "right": userCommands.right(46);
                 break;
-            case "wait": giveCommands.wait(23);
+            case "wait": userCommands.wait(23);
                 break;
             default: System.out.println("Command not recognized");
         }

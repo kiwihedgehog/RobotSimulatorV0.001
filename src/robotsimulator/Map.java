@@ -1,33 +1,57 @@
 package robotsimulator;
 
-import java.util.ArrayList;
-
 /**
  *  The Map class contains everything to do with the location 
- * references which have the ability to describe the relational location of the robot
+ * references which have the ability to describe the location to the user.
  * @author masona11
  */
 class Map {
     private int xCoordinates;
     private int yCoordinates;
-    final String north = "North";
-    final String south = "South";
-    final String east =  "East";
-    final String west = "West";
     String cardinalDirection;
-    ArrayList positionLog = new ArrayList();
+    private int rotationalDegree;
     
-    public void setMapPosition(){
-        
+    
+    public Map(){
+        xCoordinates = 0;
+        yCoordinates = 0;
+        cardinalDirection = "North";
+        rotationalDegree = 0;
     }
 
-    public ArrayList getPositionLog(Movement movement) {
-        return positionLog;
+    public String getCardinalDirection() {
+        return cardinalDirection;
     }
 
-    public void setPositionLog(ArrayList positionLog) {
-        this.positionLog = positionLog;
+    public int getRotationalDegree() {
+        return rotationalDegree;
     }
+
+    public int getxCoordinates() {
+        return xCoordinates;
+    }
+
+    public int getyCoordinates() {
+        return yCoordinates;
+    }
+
+    public void setCardinalDirection(String cardinalDirection) {
+        this.cardinalDirection = cardinalDirection;
+    }
+
+    public void setRotationalDegree(int rotationalDegree) {
+        this.rotationalDegree = rotationalDegree;
+    }
+
+    public void setxCoordinates(int xCoordinates) {
+        this.xCoordinates = xCoordinates;
+    }
+
+    public void setyCoordinates(int yCoordinates) {
+        this.yCoordinates = yCoordinates;
+    }
+    
+    
 
 
 }

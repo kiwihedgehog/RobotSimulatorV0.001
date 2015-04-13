@@ -7,12 +7,13 @@ import java.util.ArrayList;
  * @author masona11
  */
 class Robot {
+    private Map surfaceArea = new Map();
    private Motor leftMotor;
    private Motor rightMotor;
    private final int maxMovementSpeed = 100;
    private int TotaldistanceTravelled;
-   private double turnSpeed;
-   private int[][] mapLocationLog = new int[2000][2000]; //User cannot specify more than 2k commands.
+   ArrayList positionLog = new ArrayList();
+   private int[][] mapLocationLog = new int[2000][2000]; //We need to dynamicaly set the array size after we know what commands the user will make.
 
     public Motor getLeftMotor() {
         return leftMotor;
@@ -29,10 +30,6 @@ class Robot {
     public int getTotaldistanceTravelled() {
         return TotaldistanceTravelled;
     }
-
-    public double getTurnSpeed() {
-        return turnSpeed;
-    }
    
             public int[][] getMapLocationLog() {
         return mapLocationLog;
@@ -42,7 +39,13 @@ class Robot {
         this.mapLocationLog = mapLocationLog;
     }
 
-   
+    //Prints all the map data for the current Robot.
+   public void printPosition(Map currentMapData){
+       System.out.println(currentMapData.getyCoordinates());
+       System.out.println(currentMapData.getxCoordinates());
+       System.out.println(currentMapData.getCardinalDirection());
+       System.out.println(currentMapData.getRotationalDegree());
+   }
    
    
    
