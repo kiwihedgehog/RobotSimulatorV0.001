@@ -90,7 +90,10 @@ public class SimulatorEngineState {
                 case "exit":  // Can change the code to finish everything it is doing and exit via control flow.
                     System.exit(0);
             }
-            userCommands.addCommandToList(commands);
+            // The if statement below is to stop the program adding the user interface commands to the robots command list
+            if(!commands.equals("commands") || !commands.equals("go")){
+                userCommands.addCommandToList(commands);
+            }
         }
         
         
