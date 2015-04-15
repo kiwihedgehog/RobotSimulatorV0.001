@@ -69,22 +69,26 @@ public class SimulatorEngineState {
         
         String commands = "start";
         
-        while(!commands.equals("exit")){
+        while(!commands.equals("go")){
         
            commands = myCommands.next();
             switch (commands) {
-                case "exit":
-                    commands = "exit";
+                case "go":
+                    commands = "go";
                     break;
                 case "commands":
-                    System.out.println(userCommands.getInstructionList());
+                    for(int i = 0; i < (userCommands.getInstructionList()).size(); i++){
+                    System.out.println(userCommands.getInstructionList().get(i));
+                    }
                     break;
                 case "wait":
                     Scanner inputWaitTime = new Scanner(System.in);
                     
                     System.out.println("How long would you like to wait?");
                     int waitTime = inputWaitTime.nextInt(); 
-                    break;                   
+                    break;  
+                case "exit":  // Can change the code to finish everything it is doing and exit via control flow.
+                    System.exit(0);
             }
             userCommands.addCommandToList(commands);
         }
