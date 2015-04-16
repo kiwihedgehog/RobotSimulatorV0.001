@@ -81,12 +81,17 @@ public class SimulatorEngineState {
                     System.out.println(userCommands.getInstructionList().get(i));
                     }
                     break;
-                case "wait":
+                case "wait": //Must be changed to an arraylist or array for if the user wants to stop multiple times.
                     Scanner inputWaitTime = new Scanner(System.in);
                     
                     System.out.println("How long would you like to wait?");
                     int waitTime = inputWaitTime.nextInt(); 
-                    break;  
+                    userCommands.setWaitTime(waitTime);
+                    break;
+                case "stop":
+                    Scanner inputStopTime = new Scanner(System.in);
+                    int stopTime = inputStopTime.nextInt();
+                    userCommands.setStopTime(stopTime);
                 case "exit":  // Can change the code to finish everything it is doing and exit via control flow.
                     System.exit(0);
             }
