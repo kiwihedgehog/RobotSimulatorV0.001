@@ -7,7 +7,10 @@ import java.util.ArrayList;
  * @author masona11
  */
 class Robot {
-    private Map surfaceArea = new Map();
+   private Map surfaceArea = new Map();
+   
+   Movement m = new Movement(surfaceArea);
+   
    private Motor leftMotor;
    private Motor rightMotor;
    private final int maxMovementSpeed = 100;
