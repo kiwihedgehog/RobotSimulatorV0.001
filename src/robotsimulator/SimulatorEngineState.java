@@ -71,7 +71,7 @@ public class SimulatorEngineState {
         
         while(!commands.equals("go")){
         
-           commands = myCommands.next();
+           commands = myCommands.next().toString();
             switch (commands) {
                 case "go":
                     commands = "go";
@@ -82,18 +82,14 @@ public class SimulatorEngineState {
                     }
                     break;
                 case "wait": //Must be changed to an arraylist or array for if the user wants to stop multiple times.
-                    Scanner inputWaitTime = new Scanner(System.in);
                     
                     System.out.println("How long would you like to wait?");
-                    int waitTime = inputWaitTime.nextInt(); 
+                    int waitTime = myCommands.nextInt(); 
                     userCommands.setWaitTime(waitTime);
                     break;
-                case "stop":
-                    Scanner inputStopTime = new Scanner(System.in);
-                    int stopTime = inputStopTime.nextInt();
-                    userCommands.setStopTime(stopTime);
                 case "exit":  // Can change the code to finish everything it is doing and exit via control flow.
                     System.exit(0);
+                default: ;
             }
             // The if statement below is to stop the program adding the user interface commands to the robots command list
             if(!commands.equals("commands") || !commands.equals("go")){

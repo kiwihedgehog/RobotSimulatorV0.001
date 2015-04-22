@@ -16,6 +16,7 @@ class Commands {
     private double centimetres;
     private Movement moveToLocation;
     private Robot myRobot;
+    private int stopTime;
     
     public Commands() {
         instructionList.add("stop - Stops the robot");
@@ -109,6 +110,10 @@ class Commands {
 
     public ArrayList<String> getInstructionList() {
         return instructionList;
+    }
+
+    void setStopTime(int stopTime) {
+       this.stopTime = stopTime;
     }
 
    
