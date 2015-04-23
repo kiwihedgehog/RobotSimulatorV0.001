@@ -4,6 +4,7 @@ package robotsimulator;
  *  The Map class contains everything to do with the location 
  * references which have the ability to describe the location to the user.
  * @author masona11
+ * @author Mitch Hill
  */
 class Map {
     private int xCoordinates;

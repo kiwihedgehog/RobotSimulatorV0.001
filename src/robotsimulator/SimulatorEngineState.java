@@ -5,6 +5,7 @@ import java.util.Scanner;
  * The simulator engine class will be a class in which all methods will be activated and used together to combine and work the program as a whole.
  * If you want to spend any time cleaning up redundant or sloppy code, this will be the place to do so.
  * @author masona11
+ * @author Mitch Hill
  */
 public class SimulatorEngineState {
     
@@ -89,7 +90,8 @@ public class SimulatorEngineState {
                     break;
                 case "exit":  // Can change the code to finish everything it is doing and exit via control flow.
                     System.exit(0);
-                default: ;
+                default:
+                    System.out.println("'" + commands + "' was not a valid command"); // lets user know their command was not a valid one
             }
             // The if statement below is to stop the program adding the user interface commands to the robots command list
             if(!commands.equals("commands") || !commands.equals("go")){
@@ -113,8 +115,7 @@ public class SimulatorEngineState {
     for(int i = 0; i > userCommands.getCommandList().size(); i++){
         
         switch(userCommands.getCommandList().get(i).toString()) {
-            case "stop": userCommands.stopRobot();
-                break;
+            
             case "forward": userCommands.forward(25);
                 break;
             case "backward": userCommands.backwards(23);

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /**
  * The movement class will contain any calculations which are required to calculate a new position for the robot. This class largely relies on the map class and robot class.
  * @author masona11
+ * @author Mitch Hill
  */
 class Movement {
     private Map surfaceArea = new Map();

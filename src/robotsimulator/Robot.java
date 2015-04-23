@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /**
  * The robot class will decide the boundaries of how the robot will move around the map. Location information relating to the robot itself
  * @author masona11
+ * @author Mitch Hill
  */
 class Robot {
    private Map surfaceArea = new Map();
