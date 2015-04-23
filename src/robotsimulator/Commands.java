@@ -6,6 +6,7 @@ import java.util.ArrayList;
  *
  * This class knows how to execute commands and deal with user related issues in terms of commands.
  * @author masona11
+ * @author Mitch Hill
  */
 class Commands {
     private ArrayList timeQeue = new ArrayList();
@@ -19,7 +20,6 @@ class Commands {
     private int stopTime;
     
     public Commands() {
-        instructionList.add("stop - Stops the robot");
         instructionList.add("forward - Moves the robot forward at default motor speed.");
         instructionList.add("backward - Moves the robot back at a default motor speed.");
         instructionList.add("left - Turns the robot left at the current set speed.");
@@ -29,9 +29,7 @@ class Commands {
         instructionList.add("exit - Exits the Robot Simulator.");
     }
     //Methods implemented here in the commands class for later expansion of command utility and structure.
-    public void stopRobot(){
-        
-    }
+    
     
     public void left (int degrees) {
      int finalFace = moveToLocation.turnLeft(degrees);
