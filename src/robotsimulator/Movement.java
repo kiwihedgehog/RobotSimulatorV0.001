@@ -66,7 +66,8 @@ class Movement {
 
     public boolean isBetween(int x, int lower, int upper){
        boolean condition = true;
-        
+       
+       
         return condition;
     }
 
@@ -94,7 +95,19 @@ class Movement {
         return degreeDirection;
     }
 
-    public void moveForward(int centimetres) {
+    public void moveForward(int time) {
+        int centimetres;
+        
+        if (myRobot.getLeftMotor().getMotorPower() == myRobot.getRightMotor().getMotorPower()) {
+            centimetres = time * myRobot.getRightMotor().getMotorPower();
+        }
+        
+        
+        //
+        //
+        //add to map
+        //
+        //
     }
     
 
